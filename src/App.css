@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-image: url('https://d194ip2226q57d.cloudfront.net/original_images/cheers.png');
+  background-size: cover;
 }
 
 .App-logo {
@@ -21,7 +23,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(77, 55, 55);
 }
 
 .App-link {
@@ -35,4 +37,102 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  color: gold;
+  font-weight: bold;
+  font-size: 80px;
+  text-shadow: 3px 3px #212F3C;
+}
+
+.drink-container {
+  /* background-image: url('https://d194ip2226q57d.cloudfront.net/original_images/cheers.png'); */
+  /* background-size: cover; */
+}
+
+/* .drink-card {
+  width: 200px;
+  height: auto;
+  box-shadow: 5px 5px 5px rgb(114, 114, 114);
+  border-radius: 5px;
+  padding: 10px;
+  /* background-color: rgb(95, 95, 100); */
+  /* color: aliceblue;
+  margin-bottom: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} */ 
+
+.flip-card-front img {
+  max-width: 300px;
+  height: 205px;
+}
+
+.drink-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* background-color: navy; */
+  /* flex-direction: column-reverse; */
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid #f1f1f1; */
+  /* perspective: 1000px; Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  max-width: 250px;
+  max-height: 300px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  display: grid;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  min-width: 100%;
+  position: absolute;
+  max-height: 300px;
+  max-width: 250px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: whitesmoke;
+  /* opacity: 85%; */
+  color: black;
+  font-family: cursive;
+  /* font-size: 16px; */
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(78, 104, 129);
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+p {
+  font-size: small;
 }
