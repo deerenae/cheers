@@ -11,6 +11,7 @@ class App extends Component {
     martinis: [],
     margaritas: [],
     sours: [],
+    cocktails: [],
     random: [],
     toggleShow: true
   }
@@ -33,6 +34,13 @@ class App extends Component {
     .then(response => response.json())
     .then(sours=> {
       this.setState({sours: sours.drinks})
+    })
+
+
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=cocktail')
+    .then(response => response.json())
+    .then(cocktails=> {
+      this.setState({cocktails: cocktails.drinks})
     })
 
     fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
@@ -61,22 +69,24 @@ class App extends Component {
                 <ReactBootstrap.NavDropdown.Item href="#action/3.1">Martinis</ReactBootstrap.NavDropdown.Item>
                 <ReactBootstrap.NavDropdown.Item href="#action/3.2">Margaritas</ReactBootstrap.NavDropdown.Item>
                 <ReactBootstrap.NavDropdown.Item href="#action/3.3">Sours</ReactBootstrap.NavDropdown.Item>
+                <ReactBootstrap.NavDropdown.Item href="#action/3.4">Cocktails</ReactBootstrap.NavDropdown.Item>
                 <ReactBootstrap.NavDropdown.Divider />
-                {/* <ReactBootstrap.NavDropdown.Item onClick={() => handleToggle()}>Random Drink</ReactBootstrap.NavDropdown.Item> */}
+                <ReactBootstrap.NavDropdown.Item >Random Drink</ReactBootstrap.NavDropdown.Item>
               </ReactBootstrap.NavDropdown>
             </ReactBootstrap.Nav>
             <ReactBootstrap.Nav> 
             </ReactBootstrap.Nav>
           </ReactBootstrap.Navbar.Collapse>
         </ReactBootstrap.Navbar>
-        {this.state.toggleShow
-        ?(
-        <DrinksContainer martinis={this.state.martinis} margaritas={this.state.margaritas} sours={this.state.sours} /> )
+        {/* {this.state.toggleShow
+        ?( */}
+        <DrinksContainer martinis={this.state.martinis} margaritas={this.state.margaritas} sours={this.state.sours} cocktails={this.state.cocktails} /> 
+        {/* )
         :
-        (
+        ( */}
           <RandomDrink random={this.state.random} />
-        )
-        }
+        {/* )
+        } */}
       </div>
     );
   }
