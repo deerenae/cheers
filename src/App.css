@@ -5,26 +5,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: whitesmoke;
+  min-height: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(77, 55, 55);
-}
-
-h1 {
+  font-size: 40px;;
   color: rgb(182, 157, 17);
   font-weight: bold;
-  font-size: xx-large;
-  text-shadow: 3px 3px #212F3C;
-  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROFrS6XVT7Ng-weW1RFvDFCA7VGa6aUEuq59GNvhHh21iLKjFT&usqp=CAU'); */
+  font-family: 'Calligraffitti', cursive;
 }
-#nav-title {
-  text-align: center;
-}
+
 .flip-card-front img {
   width: 205px;
   height: 205px;
