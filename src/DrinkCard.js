@@ -8,7 +8,7 @@ export default function DrinkCard(props) {
             <div className="flip-card-inner">
                 <div className="flip-card-front">
                     <img src={props.drink.strDrinkThumb} /> 
-                    <h3>{props.drink.strDrink}</h3> 
+                    <h3 className="drink-name">{props.drink.strDrink}</h3> 
                 </div>   
                 <div className="flip-card-back" >
                     <h4>Ingredients:</h4>

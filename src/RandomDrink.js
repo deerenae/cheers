@@ -8,8 +8,7 @@ export default function RandomDrink (props) {
     })
 
     return (
-        <div>
-        <h2>random</h2>
+        <div className="random-drink">
         {renderRandom} 
         </div>
     )
